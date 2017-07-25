@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="target_type">
+        <item>限期目标</item>
+        <item>不限期目标</item>
+    </string-array>
+
+    <string-array name="alarm_type">
+        <item>闹钟</item>
+        <item>通知</item>
+    </string-array>
+
+</resources>

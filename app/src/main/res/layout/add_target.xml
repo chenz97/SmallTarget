@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_add_target"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:elevation="4dp"
+        app:title="@string/title_activity_new_target"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+    <EditText
+        android:layout_below="@+id/toolbar_add_target"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/TargetNameHint"
+        android:id="@+id/target_name" />
+
+    <TextView
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/target_type_hint"
+        android:layout_below="@id/target_name"
+        android:text="@string/TargetTypeHint" />
+
+
+    <Spinner
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/target_type"
+        android:spinnerMode="dropdown"
+        android:entries="@array/target_type"
+        android:layout_alignTop="@id/target_type_hint"
+        android:layout_toEndOf="@id/target_type_hint" />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/end_time_hint"
+        android:text="@string/end_time_hint"
+        android:layout_below="@id/target_type"
+        />
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/end_time"
+        android:clickable="true"
+        android:text="@string/default_end_time"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/end_time_hint"
+        android:layout_toEndOf="@id/end_time_hint" />
+
+    <TextView
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/end_time"
+        android:text="@string/alarm"
+        android:id="@+id/alarm_hint"
+        android:layout_alignParentStart="true"
+        />
+
+    <Switch
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_alarm"
+        android:layout_below="@+id/end_time_hint"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_time"
+        android:id="@+id/alarm_time_hint"
+        android:layout_below="@id/switch_alarm" />
+
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarm_time"
+        android:clickable="true"
+        android:text="@string/default_alarm_time"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/alarm_time_hint"
+        android:layout_toEndOf="@id/alarm_time_hint" />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarm_type_hint"
+        android:text="@string/alarm_type_hint"
+        android:layout_below="@id/alarm_time"/>
+
+    <Spinner
+        android:paddingTop="@dimen/item_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/alarm_type"
+        android:layout_below="@id/alarm_time"
+        android:spinnerMode="dropdown"
+        android:id="@+id/alarm_type"
+        android:layout_alignTop="@id/alarm_type_hint"
+        android:layout_toEndOf="@id/alarm_type_hint"
+        />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm_type"
+        android:text="@string/repeat"
+        android:id="@+id/repeat"/>
+
+    <RelativeLayout
+        android:id="@+id/choose_week"
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarm_type"
+        android:layout_toEndOf="@+id/repeat">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week0"
+            android:id="@+id/week0"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week1"
+            android:id="@+id/week1"
+            android:layout_toEndOf="@+id/week0" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week2"
+            android:id="@+id/week2"
+            android:layout_toEndOf="@+id/week1" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week3"
+            android:id="@+id/week3"
+            android:layout_toEndOf="@+id/week2" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week4"
+            android:id="@+id/week4"
+            android:layout_below="@+id/week0"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week5"
+            android:id="@+id/week5"
+            android:layout_below="@+id/week0"
+            android:layout_toEndOf="@+id/week4" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week6"
+            android:id="@+id/week6"
+            android:layout_below="@+id/week0"
+            android:layout_toEndOf="@+id/week5" />
+    </RelativeLayout>
+
+    <TextView
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_week"
+        android:text="@string/lock_phone_hint"
+        android:id="@+id/lock_hint"
+        android:layout_alignParentStart="true"
+        />
+
+    <Switch
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_lock"
+        android:layout_below="@+id/choose_week"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lock_time_hint"
+        android:text="@string/lock_time_hint"
+        android:layout_below="@id/lock_hint"
+        />
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lock_time"
+        android:clickable="true"
+        android:text="@string/default_lock_time"
+        android:textColor="@color/black"
+        android:layout_below="@id/lock_hint"
+        android:layout_toEndOf="@id/lock_time_hint" />
+
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:id="@+id/app_num"
+        android:layout_below="@+id/lock_time"
+        android:clickable="true"/>
+    <TextView
+        android:paddingTop="@dimen/item_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_num_hint"
+        android:layout_below="@+id/lock_time"
+        android:layout_toEndOf="@+id/app_num"
+        android:text="@string/lock_phone"
+        android:clickable="true"/>
+
+
+
+</RelativeLayout>

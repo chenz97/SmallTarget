@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">小目标</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!--for MainActivity-->
+    <string name="Today">今日</string>
+    <string name="title_activity_new_target">新建目标</string>
+
+    <!--for AddTarget-->
+    <string name="TargetNameHint">请输入目标名称</string>
+    <string name="TargetTypeHint">目标时限</string>
+    <string name="end_time_hint">完成时间</string>
+    <string name="default_end_time">2018年1月1日</string>
+    <string name="alarm">提醒</string>
+    <string name="alarm_time">提醒时间</string>
+    <string name="default_alarm_time">21:00</string>
+    <string name="alarm_type_hint">提醒方式</string>
+    <string name="week0">周日</string>
+    <string name="week1">周一</string>
+    <string name="week2">周二</string>
+    <string name="week3">周三</string>
+    <string name="week4">周四</string>
+    <string name="week5">周五</string>
+    <string name="week6">周六</string>
+    <string name="repeat">重复方式</string>
+    <string name="lock_phone_hint">应用锁定</string>
+    <string name="lock_phone">个应用将被定</string>
+    <string name="lock_time_hint">锁定时长</string>
+    <string name="default_lock_time">01:00</string>
+
+</resources>
